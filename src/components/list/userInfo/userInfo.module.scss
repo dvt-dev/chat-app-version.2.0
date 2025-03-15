@@ -1,0 +1,23 @@
+.user-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .user-info__avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-info__name {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+  }
+}
