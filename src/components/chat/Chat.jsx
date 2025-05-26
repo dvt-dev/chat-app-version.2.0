@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {FaPhone, FaVideo, FaCircleInfo } from "react-icons/fa6";
-import { MdAttachFile } from "react-icons/md";
+import { MdAttachFile,  MdOutlineEmojiEmotions  } from "react-icons/md";
 import { IoSend } from "react-icons/io5";
+
+import EmojiPicker from 'emoji-picker-react';
 
 import classNames from 'classnames/bind';
 import styles from './Chat.module.scss';
@@ -10,6 +12,9 @@ import styles from './Chat.module.scss';
 const cx = classNames.bind(styles);
 
 const Chat = () => {
+
+  const [openEmoji, setOpenEmoji] = useState(false);
+
   return (
     <div className={cx('chat-container')}>
       <div className={cx('chat__header')}>
@@ -46,6 +51,12 @@ const Chat = () => {
           </div>
           <div className={cx('message-form__input')}>
             <input type="text" placeholder='Nhập tin nhắn...' className={cx('message-form__input-field')}/>
+          </div>
+          <div className={cx('message-form__emoji')}>
+            <button className={cx('message-form__emoji-btn')} onClick={() => setOpenEmoji(prev => !prev)}>
+              <MdOutlineEmojiEmotions  size={28} />
+            </button>
+              <EmojiPicker open={openEmoji}/>
           </div>
         </div>       
         <div className={cx('message-form__send')}>

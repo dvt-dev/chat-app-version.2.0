@@ -106,22 +106,34 @@
         font-size: 1.6rem;
         color: var(--black-color);
         background-color: #f7f7f7;
-        margin-right: 10px;
 
-        &:focus {
-          border-color: #007bff;
-          outline: none;
+        .message-form__input-field {
+          width: 100%;
         }
       }
-    }
 
-    
+      .message-form__emoji {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
 
-    
+        .message-form__emoji-btn {
+          cursor: pointer;
+          padding: 6px;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: $white-color;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }    
 
     .message-form__send {
-      width: 38px;
-      height: 38px;
+      height: 100%;
+      padding: 0 16px;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -130,8 +142,12 @@
       cursor: pointer;
 
       &:hover {
-        background-color: $white-color;
+        background-color: $light-gray-color;
         transition: all 0.3s ease-in-out;
+      }
+
+      .message-form__send-btn {
+        cursor: pointer;
       }
     }
   }
