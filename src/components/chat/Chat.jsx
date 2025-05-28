@@ -14,6 +14,15 @@ const cx = classNames.bind(styles);
 const Chat = () => {
 
   const [openEmoji, setOpenEmoji] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+
+  const handleEmojiClick = (emoji) => {
+    console.log(emoji);
+    setInputValue(prev => prev + emoji.emoji);
+    setOpenEmoji(false);
+  }
+
+  console.log('inputValue', inputValue);
 
   return (
     <div className={cx('chat-container')}>
@@ -39,7 +48,159 @@ const Chat = () => {
           </div>
       </div>
       <div className={cx('messages-list')}>
-
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>    
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}>How are you doing ?</p>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minima commodi dolores laudantium totam, aspernatur magnam dicta dignissimos laborum laboriosam soluta incidunt reiciendis recusandae animi est assumenda saepe beatae et! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+        <div className={cx('message', 'message--received')}>
+          <div className={cx('message__avatar')}>
+            <img src='https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg' alt='message-avatar' className={cx('message__avatar-img')}></img>
+          </div>
+          <div className={cx('message__content')}>
+            <div className={cx('message__image')}>
+              <img className={cx('message__image-img')} src='https://cdn-media.sforum.vn/storage/app/media/anh-dep-68.jpg' alt='message-image'></img>
+            </div>
+            <span className={cx('message__time')}>Đã sửi 10 phút trước</span>
+          </div>
+        </div>
+        <div className={cx('message', 'message--sent')}>
+          <div className={cx('message__content')}>
+            <p className={cx('message__text')}> Hình ảnh avatar đẹp, cute dễ thương, ngầu thường được mọi người sử dụng để làm ảnh đại diện cho các trang mạng các nhân của mình trên nền tảng mạng xã hội. Điều này cũng phần nào thể hiện được tính cách, sở thích cá nhân của bản nhân. Vậy, hãy cùng Sforum khám phá ngay 101+ ảnh avatar cute dễ thương nhất thế giới nhé! </p>
+            <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
+          </div>
+        </div>   
+                 
       </div>
       <div className={cx('message-form')}>
         <div className={cx('message-form-container')}>
@@ -50,13 +211,20 @@ const Chat = () => {
             </button>
           </div>
           <div className={cx('message-form__input')}>
-            <input type="text" placeholder='Nhập tin nhắn...' className={cx('message-form__input-field')}/>
+            <input 
+            type="text" 
+            placeholder='Nhập tin nhắn...' 
+            className={cx('message-form__input-field')} 
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}/>
           </div>
           <div className={cx('message-form__emoji')}>
             <button className={cx('message-form__emoji-btn')} onClick={() => setOpenEmoji(prev => !prev)}>
               <MdOutlineEmojiEmotions  size={28} />
             </button>
-              <EmojiPicker open={openEmoji}/>
+            <div className={cx('message-form__emoji-picker')}>
+              <EmojiPicker open={openEmoji} onEmojiClick={handleEmojiClick}/>
+            </div>
           </div>
         </div>       
         <div className={cx('message-form__send')}>
