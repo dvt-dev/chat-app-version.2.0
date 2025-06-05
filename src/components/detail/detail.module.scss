@@ -1,7 +1,139 @@
+@use 'sass:color';
+
 .detail-container {
   flex: 1;
-  background-color: var(--white-color);
+  background-color: $white-color;
   box-shadow: 2px 2px 8px 0px rgba(25, 23, 23, 0.05);
   border-radius: 10px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .room-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .room-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+
+      .room-image__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .room-name {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $black-color;
+      margin-top: 10px;
+    }
+  }
+
+  .room-options {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 20px;
+
+    .room-option {
+      padding: 8px;
+      border-radius: 5px;
+
+      .room-option__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        color: $black-color;
+
+        .room-option__icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .photo-list {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .photo-item {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding: 6px;
+
+          .photo-item__img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-right: 10px;
+          }
+
+          .photo-item__name {
+            font-size: 1.4rem;
+            flex: 1;
+          }
+
+          .download-icon {
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          &:hover {
+            background-color: $light-gray-color;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &.room-option--disappearing-messages, &.room-option--encryption, &.room-option--block, &.room-option--report {
+        display: flex;
+        justify-content: flex-start;
+        
+        .room-option__title {
+          gap: 20px;;
+        }
+      }
+
+      &:not(.room-option--media):hover {
+        background-color: $light-gray-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .room-option__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $light-gray-color;
+    color: $black-color;
+    font-weight: 600;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: color.adjust($light-gray-color, $lightness: -10%);
+      cursor: pointer;
+    }
+
+    .logout-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
 }

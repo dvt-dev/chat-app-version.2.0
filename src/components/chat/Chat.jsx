@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import {FaPhone, FaVideo, FaCircleInfo } from "react-icons/fa6";
 import { MdAttachFile,  MdOutlineEmojiEmotions  } from "react-icons/md";
@@ -22,7 +22,14 @@ const Chat = () => {
     setOpenEmoji(false);
   }
 
-  console.log('inputValue', inputValue);
+  const endMessageRef = useRef(null);
+
+  // Scroll to the bottom of the messages list
+  useEffect(() => {
+    endMessageRef.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }, []);
 
   return (
     <div className={cx('chat-container')}>
@@ -199,8 +206,8 @@ const Chat = () => {
             <p className={cx('message__text')}> Hình ảnh avatar đẹp, cute dễ thương, ngầu thường được mọi người sử dụng để làm ảnh đại diện cho các trang mạng các nhân của mình trên nền tảng mạng xã hội. Điều này cũng phần nào thể hiện được tính cách, sở thích cá nhân của bản nhân. Vậy, hãy cùng Sforum khám phá ngay 101+ ảnh avatar cute dễ thương nhất thế giới nhé! </p>
             <span className={cx('message__time')}>Đã gửi 30 giây trước</span>
           </div>
-        </div>   
-                 
+          <div ref={endMessageRef} className={cx('end-message')}></div>
+        </div>                   
       </div>
       <div className={cx('message-form')}>
         <div className={cx('message-form-container')}>
