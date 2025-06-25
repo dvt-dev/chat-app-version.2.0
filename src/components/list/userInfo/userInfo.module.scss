@@ -22,7 +22,17 @@
   }
 
   .icons {
-    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $light-gray-color;
+      transition: all 0.3s ease-in-out;
+    }
   }
 }

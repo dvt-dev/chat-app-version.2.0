@@ -1,10 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 import classNames from 'classnames/bind';
 import styles from './login.module.scss';
 const cx = classNames.bind(styles);
 
 const Login = () => {
+  const [avatar, setAvatar] = useState({
+    file: null,
+    url: ""
+  });
+
+  const handleAvatar = (e) => {
+    const file = e.target.files[0];
+    if(file) {
+      const fileType = file.type.split('/')[0];
+      if(fileType !== 'image') {
+        alert('Vui lòng chọn một tệp hình ảnh.');
+        return;
+      }
+      setAvatar({
+        file,
+        url: URL.createObjectURL(file)
+      });
+    }
+   
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    toast.error('Vui lòng nhập đầy đủ thông tin đăng nhập.');
+  
+  };
+
   return (
     <div className={cx('login')}>
       <div className={cx('login__container')}>
@@ -35,6 +63,7 @@ const Login = () => {
               className='login-form__password' />
           </div>
           <button 
+            onClick={handleLogin}
             type='submit' 
             className={cx('login-form__btn')}>Đăng nhập</button>
         </form>
@@ -47,15 +76,23 @@ const Login = () => {
       <div className={cx('register__container')}>
         <h2 className={cx('register__title')}>Đăng ký</h2>
         <form className={cx('register__form')}>
-          <label 
+          <div className={cx('register-form__avatar')}>
+            <label 
             htmlFor='avatar' 
             className={cx('register-form__avatar-label')}>
-            <span className={cx('register-form__avatar-text')}>Chọn ảnh đại diện</span>
-          </label>
-          <input 
-            type='file' 
-            id='avatar' 
-            className='register-form__avatar' />
+            {/* <span className={cx('register-form__avatar-text')}>Chọn ảnh đại diện</span> */}
+              <img className={cx('register-form__avatar-image')} 
+              src={avatar.url || 'https://i.pinimg.com/736x/8f/1c/a2/8f1ca2029e2efceebd22fa05cca423d7.jpg'} 
+              alt='Avatar' />
+            </label>
+            <input 
+              type='file' 
+              id='avatar' 
+              className={cx('register-form__avatar-input')}
+              onChange={handleAvatar}
+              />
+          </div>
+          
           <div className={cx('form-group')}>
             <label 
               htmlFor='username' 

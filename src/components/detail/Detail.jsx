@@ -47,35 +47,35 @@ const Detail = () => {
               <img className={cx('photo-item__img')} src="https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg" alt="photo" />
               <span className={cx('photo-item__name')}>photo 1</span>
               <span className={cx('download-icon')}>
-                <MdOutlineFileDownload size={32} />
+                <MdOutlineFileDownload size={28} />
               </span>
             </div>   
             <div className={cx('photo-item')}>
               <img className={cx('photo-item__img')} src="https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg" alt="photo" />
               <span className={cx('photo-item__name')}>photo 1</span>
               <span className={cx('download-icon')}>
-                <MdOutlineFileDownload size={32} />
+                <MdOutlineFileDownload size={28} />
               </span>
             </div>   
             <div className={cx('photo-item')}>
               <img className={cx('photo-item__img')} src="https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg" alt="photo" />
               <span className={cx('photo-item__name')}>photo 1</span>
               <span className={cx('download-icon')}>
-                <MdOutlineFileDownload size={32} />
+                <MdOutlineFileDownload size={28} />
               </span>
             </div>   
             <div className={cx('photo-item')}>
               <img className={cx('photo-item__img')} src="https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg" alt="photo" />
               <span className={cx('photo-item__name')}>photo 1</span>
               <span className={cx('download-icon')}>
-                <MdOutlineFileDownload size={32} />
+                <MdOutlineFileDownload size={28} />
               </span>
             </div>   
             <div className={cx('photo-item')}>
               <img className={cx('photo-item__img')} src="https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg" alt="photo" />
               <span className={cx('photo-item__name')}>photo 1</span>
               <span className={cx('download-icon')}>
-                <MdOutlineFileDownload size={32} />
+                <MdOutlineFileDownload size={28} />
               </span>
             </div>             
           </div>
@@ -83,7 +83,7 @@ const Detail = () => {
         <li className={cx('room-option', 'room-option--disappearing-messages')}>
           <h4 className={cx('room-option__title')}>           
             <span className={cx('room-option__icon')}>
-              <FaClockRotateLeft  fontSize={24} />
+              <FaClockRotateLeft  fontSize={20} />
             </span>
             Tin nhắn tự huỷ
           </h4>
@@ -91,7 +91,7 @@ const Detail = () => {
         <li className={cx('room-option', 'room-option--encryption')}>
           <h4 className={cx('room-option__title')}>           
             <span className={cx('room-option__icon')}>
-              <FaLock  fontSize={24} />
+              <FaLock  fontSize={20} />
             </span>
             Xác minh mã hoá đầu cuối
           </h4>
@@ -99,7 +99,7 @@ const Detail = () => {
         <li className={cx('room-option', 'room-option--report')}>
           <h4 className={cx('room-option__title')}>           
             <span className={cx('room-option__icon')}>
-              <LuMessageSquareOff  fontSize={24} />
+              <LuMessageSquareOff  fontSize={20} />
             </span>
             Hạn chế
           </h4>
@@ -107,7 +107,7 @@ const Detail = () => {
         <li className={cx('room-option', 'room-option--block')}>
           <h4 className={cx('room-option__title')}>           
             <span className={cx('room-option__icon')}>
-              <FaMinusCircle fontSize={24} />
+              <FaMinusCircle fontSize={20} />
             </span>
             Chặn
           </h4>

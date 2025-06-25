@@ -15,7 +15,7 @@ const UserInfo = () => {
         <h2 className={cx('user-info__name')}>Đỗ Văn Tuấn</h2>
       </div>
       <div className={cx('icons')}>
-        <RiEditBoxLine size={30} />
+        <RiEditBoxLine size={24} />
       </div>
 
     </div>
